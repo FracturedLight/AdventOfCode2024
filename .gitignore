@@ -30,7 +30,6 @@
 *.exe
 *.out
 *.app
-Day8/day8.cpp
 
 .vscode/*
 !.vscode/settings.json
