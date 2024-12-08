@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string>
 #include <fstream>
-#include <map>
-#include <cassert>
 
 namespace aoc
 {
@@ -198,15 +196,15 @@ int main()
     const int n_nodes = n_rows * n_cols;
     std::vector<bool> anti_node_loc_map_p1(n_nodes);
     std::vector<bool> anti_node_loc_map_p2(n_nodes);
-
     aoc::populate_anti_nodes(freqnency_to_locations,
          antenna_map, n_cols, n_rows, anti_node_loc_map_p1, anti_node_loc_map_p2);
     const int anti_node_count_p1 = aoc::count_anti_nodes(anti_node_loc_map_p1);
     const int anti_node_count_p2 = aoc::count_anti_nodes(anti_node_loc_map_p2);
+
     const unsigned long long duration = 
         (unsigned long long)(std::chrono::duration_cast<std::chrono::microseconds>(
             std::chrono::high_resolution_clock::now() - t).count());
-    
+
     printf("Executed in: %llu\n", duration);
     printf("Part one answer is: %d\n", anti_node_count_p1);
     printf("Part two answer is: %d\n", anti_node_count_p2);
