@@ -105,7 +105,7 @@ void populate_anti_nodes_for_freq(
                 out_anti_node_loc_map_p1[second_anti_node_idx] = true;
             }     
 
-            // now for p2
+            // now for p2 
             anti_node_row_one = first_row;
             anti_node_col_one = first_col;
 
