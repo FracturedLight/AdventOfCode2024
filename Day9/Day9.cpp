@@ -51,9 +51,6 @@ void print_disk_map(const std::vector<int>& disk_map)
 
 std::vector<int> convert_to_disk_map(const std::vector<char>& disk)
 {
-    // 12345 ->
-    // 0..111....22222 ->
-    // 022111222......
     std::vector<int> disk_map;
     const int disk_size = disk.size();
     for(int i = 0; i < disk.size(); ++i) 
@@ -119,8 +116,6 @@ void compress_disk_map_part_two(std::vector<int>& out_disk_map)
             --high;
             ++file_counter; 
         }
-
-        //00...111...2...333.44.5555.6666.777.888899
 
         const int file_start_idx = file_end_idx - file_counter + 1;
 
